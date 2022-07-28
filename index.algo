@@ -1,0 +1,18 @@
+ALGORITHM tri
+VAR
+    tab : ARRAY_OF INTEGER[3];
+    i: INTEGER;
+BEGIN
+    FOR i FROM 1 TO tab.length - 1 DO
+        arr := tab[i];
+
+        //Insertion
+        j := i;
+
+        WHILE (j > 0 AND tab[j - 1]) DO
+            tab[j] := tab[j - 1];
+            j := j - 1;
+            tab[j] := arr;
+        END_WHILE
+    END_FOR
+END
